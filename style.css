@@ -132,6 +132,19 @@ h5 {
     color: var(--primary);
 }
 
+.btn-white {
+    background-color: var(--white);
+    color: var(--primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white:hover {
+    background-color: #f9f9f9;
+    color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .full-width {
     width: 100%;
 }
@@ -364,8 +377,17 @@ h5 {
 /* Differentials */
 .differenciais {
     padding: 50px 0 var(--spacing-xl) 0;
-    background-color: var(--white);
-    /* Changed to white for cleaner look as in image */
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.differenciais .section-title,
+.differenciais .section-subtitle {
+    color: var(--white);
+}
+
+.differenciais .section-subtitle {
+    opacity: 0.9;
 }
 
 .differenciais .section-header {
@@ -402,16 +424,13 @@ h5 {
 .icon-box {
     width: 70px;
     height: 70px;
-    background-color: var(--primary);
-    /* Use primary orange */
+    background-color: var(--white);
     border-radius: 4px;
-    /* Slight radius */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
-    /* Remove bottom margin */
-    color: var(--white);
+    color: var(--primary);
     font-size: 1.8rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
@@ -422,8 +441,8 @@ h5 {
 }
 
 .benefit-card:hover .icon-box {
-    background-color: var(--primary-hover);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--primary-hover);
     transform: skewX(-15deg) scale(1.05);
 }
 
@@ -439,13 +458,12 @@ h5 {
 .benefit-card h4 {
     margin-bottom: 8px;
     font-size: 1.15rem;
-    color: #444;
-    /* Dark gray title */
+    color: var(--white);
     font-weight: 600;
 }
 
 .benefit-card p {
-    color: #666;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.95rem;
     line-height: 1.5;
 }
