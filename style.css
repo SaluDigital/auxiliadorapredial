@@ -150,9 +150,14 @@ h5 {
 
 .header.scrolled {
     background: rgba(26, 26, 26, 0.95);
-    padding: 15px 0;
+    padding: 10px 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+}
+
+.header.scrolled .logo-img {
+    height: 45px;
+    padding: 6px 12px;
 }
 
 .header-container {
@@ -212,7 +217,7 @@ h5 {
 .hero {
     height: 100vh;
     min-height: 650px;
-    background-image: url('assets/hero_signing.png');
+    background-image: url('assets/hero_generated.png');
     background-size: cover;
     background-position: center;
     position: relative;
