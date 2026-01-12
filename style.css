@@ -150,14 +150,14 @@ h5 {
 
 .header.scrolled {
     background: rgba(26, 26, 26, 0.95);
-    padding: 10px 0;
+    padding: 5px 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
 }
 
 .header.scrolled .logo-img {
-    height: 45px;
-    padding: 6px 12px;
+    height: 35px;
+    padding: 4px 10px;
 }
 
 .header-container {
