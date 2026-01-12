@@ -727,6 +727,13 @@ textarea:focus {
         width: 100%;
     }
 
+    .logo-img {
+        height: 40px;
+        padding: 5px 10px;
+    }
+
+
+
     /* Hide entire nav (links + button) on mobile */
     .nav {
         display: none;
