@@ -388,6 +388,114 @@ h5 {
     font-size: 1.1rem;
 }
 
+/* Stats Highlight Section */
+.stats-highlight {
+    padding: 20px 0 60px 0;
+    margin-top: -30px;
+    /* Overlap slightly with intro */
+    position: relative;
+    z-index: 5;
+}
+
+.stats-bar {
+    background-color: #FFFDF8;
+    /* Creamy white background similar to image */
+    border-radius: 100px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(243, 149, 25, 0.1);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    position: relative;
+    padding: 0 20px;
+}
+
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.stat-badge {
+    color: #f39519;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.stat-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0c1c38;
+    /* Dark navy for contrast, or I can use Green */
+    color: var(--primary);
+    line-height: 1;
+}
+
+.stat-description {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+    line-height: 1.2;
+    max-width: 150px;
+}
+
+@media (max-width: 1024px) {
+    .stats-bar {
+        border-radius: 30px;
+        flex-wrap: wrap;
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .stat-item {
+        flex: 0 0 calc(50% - 15px);
+        padding: 0;
+    }
+
+    .stat-item:after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .stat-item {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .stat-content {
+        justify-content: center;
+    }
+
+    .stats-bar {
+        border-radius: 20px;
+        margin: 0 10px;
+    }
+}
+
 /* Differentials */
 .differenciais {
     padding: 50px 0 var(--spacing-xl) 0;
@@ -491,6 +599,20 @@ h5 {
     .benefit-card {
         align-items: flex-start;
     }
+}
+
+.differenciais .btn-white {
+    background-color: #f39519;
+    color: var(--white);
+    border: none;
+    box-shadow: 0 4px 15px rgba(243, 149, 25, 0.3);
+}
+
+.differenciais .btn-white:hover {
+    background-color: #d68215;
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(243, 149, 25, 0.4);
 }
 
 /* Lifestyle / Gallery */
