@@ -228,8 +228,7 @@ h5 {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    min-height: 650px;
+    min-height: 100vh;
     background-image: url('assets/hero_generated.png');
     background-size: cover;
     background-position: center;
@@ -237,6 +236,7 @@ h5 {
     display: flex;
     align-items: center;
     color: var(--white);
+    padding: 120px 0 60px 0;
 }
 
 .overlay {
@@ -249,13 +249,27 @@ h5 {
     z-index: 1;
 }
 
-.hero-content {
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    margin-left: 5%;
-    /* Align somewhat left for F-pattern */
-    margin-top: 120px;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-form {
+    flex: 0 0 450px;
+}
+
+.hero-form .contact-form-card {
+    margin: 0;
 }
 
 .hero-tag {
@@ -570,11 +584,10 @@ h5 {
     border-radius: 50%;
 }
 
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-    align-items: center;
+.contact-wrapper-centered {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .contact-info h3 {
@@ -585,8 +598,16 @@ h5 {
 
 .contact-info>p {
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 40px;
     font-size: 1.1rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left;
 }
 
 .info-item {
@@ -772,40 +793,26 @@ textarea:focus {
         padding: 20px 0;
     }
 
-    .hero {
-        min-height: 500px;
-        height: auto;
-        padding: 40px 0;
-        /* Reduced padding from 80px */
+    .hero-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        padding-top: 40px;
     }
 
     .hero-content {
-        margin-top: 30px;
-        /* Reduced from 120px */
+        max-width: 100%;
     }
 
-    .intro,
-    .differenciais,
-    .lifestyle,
-    .contact,
-    .faq-section,
-    .testimonials {
-        padding: 40px 0;
+    .hero-form {
+        flex: 1;
+        width: 100%;
+        max-width: 500px;
     }
 
-    .gallery-grid {
+    .info-grid {
         grid-template-columns: 1fr;
-        /* Force single column full width on mobile */
-        padding: 0;
-        /* Remove extra padding to align with container */
         gap: 20px;
-    }
-
-    .gallery-item {
-        max-width: 400px;
-        /* Optional: limit width so it doesn't look huge if tablet/landscape */
-        margin: 0 auto;
-        /* Center the item if it has max-width */
     }
 }
 

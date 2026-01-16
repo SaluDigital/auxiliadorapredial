@@ -36,14 +36,53 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="overlay"></div>
-        <div class="container hero-content">
-            <span class="hero-tag">Gestão Imobiliária Completa</span>
-            <h2 class="hero-title">Venda seu imóvel mais rápido</h2>
-            <p class="hero-subtitle">Conectamos proprietários a oportunidades reais. Venda seu imóvel com a segurança de
-                quem tem mais de 90 anos de história!</p>
-            <div class="hero-buttons">
-                <a href="#diferenciais" class="btn btn-text">Conheça nossos diferenciais <i
-                        class="fa-solid fa-arrow-down"></i></a>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">Gestão Imobiliária Completa</span>
+                <h2 class="hero-title">Venda seu imóvel mais rápido</h2>
+                <p class="hero-subtitle">Conectamos proprietários a oportunidades reais. Venda seu imóvel com a
+                    segurança de
+                    quem tem mais de 90 anos de história!</p>
+                <div class="hero-buttons">
+                    <a href="#diferenciais" class="btn btn-text">Conheça nossos diferenciais <i
+                            class="fa-solid fa-arrow-down"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-form">
+                <div class="contact-form-card">
+                    <form id="heroLeadForm">
+                        <h4>Cadastre seu imóvel</h4>
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" placeholder="(XX) 99999-9999" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="goal">O que você deseja fazer?</label>
+                            <select id="goal" required>
+                                <option value="">Selecione...</option>
+                                <option value="vender">Vender meu imóvel</option>
+                                <option value="alugar">Alugar meu imóvel</option>
+                                <option value="ambos">Avaliar venda e locação</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem (Opcional)</label>
+                            <textarea id="message" rows="3" placeholder="Conte mais sobre o imóvel..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Solicitar Contato</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -380,66 +419,34 @@
 
     <!-- Lead Capture Form -->
     <section class="contact" id="contato">
-        <div class="container contact-wrapper">
+        <div class="container contact-wrapper-centered">
             <div class="contact-info">
                 <h3>Pronto para negociar?</h3>
-                <p>Preencha o formulário e um de nossos consultores especialistas entrará em contato para agendar uma
-                    avaliação do seu imóvel.</p>
+                <p>Nossos consultores especialistas estão prontos para agendar uma avaliação do seu imóvel.</p>
 
-                <div class="info-item">
-                    <i class="fa-solid fa-map-pin"></i>
-                    <div>
-                        <strong>Endereço</strong>
-                        <p>R. Padre Anchieta, 1142 - Bigorrilho<br>Curitiba - PR, 80430-061</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fa-solid fa-map-pin"></i>
+                        <div>
+                            <strong>Endereço</strong>
+                            <p>R. Padre Anchieta, 1142 - Bigorrilho<br>Curitiba - PR, 80430-061</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Telefone</strong>
+                            <p>(41) 3300-1111</p>
+                        </div>
                     </div>
                 </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <strong>Telefone</strong>
-                        <p>(41) 3300-1111</p>
-                    </div>
-                </div>
+
                 <div class="intro-socials">
                     <a href="https://www.instagram.com/auxiliadorapredial/" target="_blank"><i
                             class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/auxiliadorapredial/" target="_blank"><i
                             class="fa-brands fa-facebook-f"></i></a>
                 </div>
-            </div>
-
-            <div class="contact-form-card">
-                <form id="leadForm">
-                    <h4>Cadastre seu imóvel</h4>
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" placeholder="Seu nome" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Telefone / WhatsApp</label>
-                            <input type="tel" id="phone" placeholder="(XX) 99999-9999" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" placeholder="seu@email.com" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="goal">O que você deseja fazer?</label>
-                        <select id="goal" required>
-                            <option value="">Selecione...</option>
-                            <option value="vender">Vender meu imóvel</option>
-                            <option value="alugar">Alugar meu imóvel</option>
-                            <option value="ambos">Avaliar venda e locação</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem (Opcional)</label>
-                        <textarea id="message" rows="3" placeholder="Conte mais sobre o imóvel..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary full-width">Solicitar Contato</button>
-                </form>
             </div>
         </div>
     </section>
