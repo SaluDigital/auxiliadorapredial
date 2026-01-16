@@ -1,7 +1,7 @@
 /* CSS Variables & Reset */
 :root {
-    --primary: #F7931D;
-    --primary-hover: #D67A0F;
+    --primary: #09854a;
+    --primary-hover: #076d3c;
     --secondary: #6AA156;
     --dark: #1A1A1A;
     --gray-text: #3E4042;
@@ -103,13 +103,13 @@ h5 {
 .btn-primary {
     background-color: var(--primary);
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(247, 147, 29, 0.3);
+    box-shadow: 0 4px 15px rgba(9, 133, 74, 0.3);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(247, 147, 29, 0.4);
+    box-shadow: 0 8px 20px rgba(9, 133, 74, 0.4);
 }
 
 .btn-outline {
