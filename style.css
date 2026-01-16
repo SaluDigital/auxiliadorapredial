@@ -920,11 +920,15 @@ textarea:focus {
         padding: 20px 0;
     }
 
+    .hero {
+        padding-top: 30px;
+    }
+
     .hero-container {
         flex-direction: column;
         gap: 40px;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 10px;
     }
 
     .hero-content {
