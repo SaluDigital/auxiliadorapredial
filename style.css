@@ -925,7 +925,7 @@ textarea:focus {
     }
 
     .hero-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 40px;
         text-align: center;
         padding-top: 10px;
