@@ -444,7 +444,7 @@ h5 {
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
-    color: var(--primary);
+    color: #f39519;
     font-size: 1.8rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
@@ -456,7 +456,7 @@ h5 {
 
 .benefit-card:hover .icon-box {
     background-color: var(--white);
-    color: var(--primary-hover);
+    color: #d68215;
     transform: skewX(-15deg) scale(1.05);
 }
 
