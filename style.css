@@ -1003,6 +1003,11 @@ textarea:focus {
         flex: 1;
         width: 100%;
         max-width: 500px;
+        text-align: left;
+    }
+
+    .contact-form-card h4 {
+        text-align: left;
     }
 
     .info-grid {
@@ -1246,9 +1251,9 @@ textarea:focus {
         order: 1;
     }
 
-    /* Reduce gap between FAQ and Lifestyle on mobile */
+    /* Increase gap between FAQ and Lifestyle on mobile */
     .faq-section {
-        padding-bottom: 10px;
+        padding-bottom: 80px;
     }
 
     .lifestyle {
