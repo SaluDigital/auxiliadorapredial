@@ -286,7 +286,7 @@ h5 {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4.2rem;
     color: var(--white);
     margin-bottom: var(--spacing-sm);
     line-height: 1.1;
@@ -304,6 +304,11 @@ h5 {
     display: flex;
     gap: var(--spacing-sm);
     align-items: center;
+}
+
+.hero-buttons .btn-text {
+    padding-left: 0;
+    font-size: 1.15rem;
 }
 
 /* Intro Section */
