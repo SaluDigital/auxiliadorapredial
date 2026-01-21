@@ -700,7 +700,7 @@ h5 {
 }
 
 .cta-section .overlay {
-    background: linear-gradient(135deg, rgba(9, 133, 74, 0.85) 0%, rgba(26, 26, 26, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(243, 149, 25, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%);
     position: absolute;
     top: 0;
     left: 0;
@@ -731,16 +731,34 @@ h5 {
     font-weight: 400;
 }
 
+.cta-stats {
+    margin-bottom: 25px;
+}
+
+.cta-stats span {
+    display: inline-block;
+    padding: 8px 24px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
 .cta-button .btn {
     padding: 20px 60px;
     font-size: 1.2rem;
-    background-color: var(--white);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--white);
 }
 
 .cta-button .btn:hover {
-    background-color: #f0f0f0;
+    background-color: var(--primary-hover);
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
