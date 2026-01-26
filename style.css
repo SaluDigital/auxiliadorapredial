@@ -411,7 +411,7 @@ h5 {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(243, 149, 25, 0.1);
+    border: 2px solid var(--primary);
 }
 
 .stat-item {
