@@ -1,7 +1,7 @@
 /* CSS Variables & Reset */
 :root {
-    --primary: #6AA156;
-    --primary-hover: #588547;
+    --primary: #2E7A43;
+    --primary-hover: #246135;
     --secondary: #f39519;
     --dark: #1A1A1A;
     --gray-text: #3E4042;
@@ -103,13 +103,13 @@ h5 {
 .btn-primary {
     background-color: var(--primary);
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(106, 161, 86, 0.3);
+    box-shadow: 0 4px 15px rgba(46, 122, 67, 0.3);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(106, 161, 86, 0.4);
+    box-shadow: 0 8px 20px rgba(46, 122, 67, 0.4);
 }
 
 .btn-outline {
@@ -714,7 +714,7 @@ h5 {
 }
 
 .cta-section .overlay {
-    background: linear-gradient(135deg, rgba(106, 161, 86, 0.75) 0%, rgba(26, 26, 26, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(46, 122, 67, 0.75) 0%, rgba(26, 26, 26, 0.85) 100%);
     backdrop-filter: blur(3px);
     position: absolute;
     top: 0;
