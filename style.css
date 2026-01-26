@@ -346,15 +346,16 @@ h5 {
     right: 30px;
     background-color: var(--primary);
     color: var(--white);
-    padding: 30px 20px;
-    border-radius: 12px;
+    padding: 45px 15px;
+    border-radius: 16px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(247, 147, 29, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 140px;
+    max-width: 120px;
+    width: 100%;
 }
 
 .experience-badge .number {
