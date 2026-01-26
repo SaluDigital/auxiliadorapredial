@@ -346,7 +346,7 @@ h5 {
     right: 30px;
     background-color: var(--primary);
     color: var(--white);
-    padding: 45px 15px;
+    padding: 35px 15px;
     border-radius: 16px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(247, 147, 29, 0.3);
@@ -354,6 +354,7 @@ h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
     max-width: 140px;
     width: 100%;
 }
@@ -369,7 +370,7 @@ h5 {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .intro-text h3 {
