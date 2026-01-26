@@ -354,21 +354,22 @@ h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 120px;
+    max-width: 140px;
     width: 100%;
 }
 
 .experience-badge .number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 800;
     line-height: 1;
 }
 
 .experience-badge .text {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
 .intro-text h3 {
