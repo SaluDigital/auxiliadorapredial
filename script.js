@@ -1,9 +1,9 @@
 window.addEventListener('load', () => {
     // Form Handling
-    const form = document.getElementById('leadForm');
+    const form = document.getElementById('heroLeadForm');
 
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const btn = form.querySelector('button[type="submit"]');
@@ -12,13 +12,38 @@ window.addEventListener('load', () => {
             btn.innerText = 'Enviando...';
             btn.disabled = true;
 
-            // Simulate API call
-            setTimeout(() => {
-                alert('Obrigado! Recebemos seus dados e entraremos em contato em breve.');
-                form.reset();
+            const formData = new FormData(form);
+            const data = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                property_type: document.getElementById('property-type').value,
+                address: document.getElementById('address').value,
+                _subject: 'Novo Lead - Auxiliadora Predial Champagnat'
+            };
+
+            try {
+                const response = await fetch('https://formspree.io/f/luiz.natel@auxiliadorapredial.com.br', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert('Obrigado! Recebemos seus dados e entrarementos em contato em breve.');
+                    form.reset();
+                } else {
+                    alert('Ops! Houve um erro ao enviar. Por favor, tente novamente ou entre em contato via WhatsApp.');
+                }
+            } catch (error) {
+                alert('Ops! Erro de conexão. Por favor, verifique sua internet e tente novamente.');
+            } finally {
                 btn.innerText = originalText;
                 btn.disabled = false;
-            }, 1500);
+            }
         });
     }
 
