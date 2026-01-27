@@ -565,7 +565,7 @@ h5 {
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
-    color: var(--secondary);
+    color: var(--primary);
     font-size: 1.8rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
@@ -577,8 +577,8 @@ h5 {
 
 .benefit-card:hover .icon-box {
     background-color: var(--white);
-    color: #e67e00;
-    /* Darker orange for hover */
+    color: var(--primary-hover);
+    /* Darker green for hover */
     transform: skewX(-15deg) scale(1.05);
 }
 
