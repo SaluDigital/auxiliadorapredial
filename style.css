@@ -815,7 +815,7 @@ h5 {
 
 .info-item i {
     font-size: 1.8rem;
-    color: #f39519;
+    color: var(--primary);
     margin-top: 5px;
 }
 
@@ -853,8 +853,8 @@ h5 {
 }
 
 .footer-social-links a:hover {
-    background-color: #f39519;
-    border-color: #f39519;
+    background-color: var(--primary);
+    border-color: var(--primary);
     transform: translateY(-3px);
 }
 
