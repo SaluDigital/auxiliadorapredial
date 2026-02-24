@@ -19,7 +19,8 @@ window.addEventListener('load', () => {
                 email: document.getElementById('email').value,
                 property_type: document.getElementById('property-type').value,
                 address: document.getElementById('address').value,
-                _subject: 'Novo Lead - Auxiliadora Predial Champagnat'
+                _subject: 'Novo Lead - Auxiliadora Predial Champagnat',
+                _cc: 'ti@saludigital.com.br'
             };
 
             try {
