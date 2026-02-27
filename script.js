@@ -12,29 +12,32 @@ window.addEventListener('load', () => {
             btn.innerText = 'Enviando...';
             btn.disabled = true;
 
-            const formData = new FormData(form);
             const data = {
                 name: document.getElementById('name').value,
                 phone: document.getElementById('phone').value,
                 email: document.getElementById('email').value,
                 property_type: document.getElementById('property-type').value,
                 address: document.getElementById('address').value,
-                _subject: 'Novo Lead - Auxiliadora Predial Champagnat',
-                _cc: 'ti@saludigital.com.br'
+                _subject: 'Novo Lead - Auxiliadora Predial Champagnat'
             };
 
+            // Credenciais do webhook (Basic Auth)
+            const webhookUser = 'jfpEn}s9SC+$4G$!Fd1%';
+            const webhookPass = 'HaVJl2SgtP;F.6m|W£F.7N>\'Ho`ru4:)3{';
+            const webhookCredentials = btoa(webhookUser + ':' + webhookPass);
+
             try {
-                const response = await fetch('https://formspree.io/f/luiz.natel@auxiliadorapredial.com.br', {
+                const response = await fetch('https://automato.saludigital.com.br/webhook/auxiliadora-champagnat', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json'
+                        'Authorization': 'Basic ' + webhookCredentials
                     },
                     body: JSON.stringify(data)
                 });
 
                 if (response.ok) {
-                    alert('Obrigado! Recebemos seus dados e entrarementos em contato em breve.');
+                    alert('Obrigado! Recebemos seus dados e entraremos em contato em breve.');
                     form.reset();
                 } else {
                     alert('Ops! Houve um erro ao enviar. Por favor, tente novamente ou entre em contato via WhatsApp.');
