@@ -1,4 +1,43 @@
 window.addEventListener('load', () => {
+
+    // ─── Toast Notification ───────────────────────────────────────────
+    function showToast(type, title, message) {
+        let container = document.querySelector('.toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'toast-container';
+            document.body.appendChild(container);
+        }
+
+        const icon = type === 'success'
+            ? '<i class="fa-solid fa-circle-check"></i>'
+            : '<i class="fa-solid fa-circle-exclamation"></i>';
+
+        const toast = document.createElement('div');
+        toast.className = 'toast' + (type === 'error' ? ' toast-error' : '');
+        toast.innerHTML = `
+            <div class="toast-icon">${icon}</div>
+            <div class="toast-body">
+                <div class="toast-title">${title}</div>
+                <div class="toast-message">${message}</div>
+            </div>
+            <button class="toast-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+            <div class="toast-progress"></div>
+        `;
+
+        container.appendChild(toast);
+
+        const closeBtn = toast.querySelector('.toast-close');
+        const dismiss = () => {
+            toast.classList.add('toast-hide');
+            toast.addEventListener('animationend', () => toast.remove(), { once: true });
+        };
+
+        closeBtn.addEventListener('click', dismiss);
+        setTimeout(dismiss, 4000);
+    }
+    // ─────────────────────────────────────────────────────────────────
+
     // Form Handling
     const form = document.getElementById('heroLeadForm');
 
@@ -21,29 +60,27 @@ window.addEventListener('load', () => {
                 _subject: 'Novo Lead - Auxiliadora Predial Champagnat'
             };
 
-            // Credenciais do webhook (Basic Auth)
-            const webhookUser = 'jfpEn}s9SC+$4G$!Fd1%';
-            const webhookPass = 'HaVJl2SgtP;F.6m|W£F.7N>\'Ho`ru4:)3{';
-            const webhookCredentials = btoa(webhookUser + ':' + webhookPass);
-
             try {
                 const response = await fetch('https://automato.saludigital.com.br/webhook/auxiliadora-champagnat', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Basic ' + webhookCredentials
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(data)
                 });
 
                 if (response.ok) {
-                    alert('Obrigado! Recebemos seus dados e entraremos em contato em breve.');
+                    showToast('success', 'Mensagem enviada!', 'Recebemos seus dados e entraremos em contato em breve.');
                     form.reset();
                 } else {
-                    alert('Ops! Houve um erro ao enviar. Por favor, tente novamente ou entre em contato via WhatsApp.');
+                    const responseText = await response.text().catch(() => '');
+                    console.error('[Webhook] Erro HTTP:', response.status, response.statusText);
+                    console.error('[Webhook] Resposta:', responseText);
+                    showToast('error', 'Erro ao enviar', 'Por favor, tente novamente ou entre em contato via WhatsApp.');
                 }
             } catch (error) {
-                alert('Ops! Erro de conexão. Por favor, verifique sua internet e tente novamente.');
+                console.error('[Webhook] Exceção capturada:', error.name, error.message);
+                showToast('error', 'Erro de conexão', 'Verifique sua internet e tente novamente.');
             } finally {
                 btn.innerText = originalText;
                 btn.disabled = false;
