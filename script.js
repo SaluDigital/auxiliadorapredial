@@ -57,11 +57,23 @@ window.addEventListener('load', () => {
                 email: document.getElementById('email').value,
                 property_type: document.getElementById('property-type').value,
                 address: document.getElementById('address').value,
-                _subject: 'Novo Lead - Auxiliadora Predial Champagnat'
+                _subject: 'Novo Lead - Auxiliadora Predial Champagnat',
+                _to: 'luiz.natel@auxiliadorapredial.com.br',
+                destinatario: 'luiz.natel@auxiliadorapredial.com.br'
             };
 
             try {
+                // Envio 1: Webhook da SaluDigital (Automação)
                 const response = await fetch('https://automato.saludigital.com.br/webhook/auxiliadora-champagnat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                // Envio 2: Cópia Direta para E-mail (Direto para o Luiz)
+                await fetch('https://formsubmit.co/ajax/luiz.natel@auxiliadorapredial.com.br', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
