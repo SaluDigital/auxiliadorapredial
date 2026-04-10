@@ -82,8 +82,12 @@ window.addEventListener('load', () => {
                 });
 
                 if (response.ok) {
-                    showToast('success', 'Mensagem enviada!', 'Recebemos seus dados e entraremos em contato em breve.');
+                    showToast('success', 'Mensagem enviada!', 'Recebemos seus dados e redirecionando...');
                     form.reset();
+                    // Redireciona para a página de obrigado após um pequeno delay para o toast ser lido ou imediatamente
+                    setTimeout(() => {
+                        window.location.href = 'obrigado.html';
+                    }, 1500);
                 } else {
                     const responseText = await response.text().catch(() => '');
                     console.error('[Webhook] Erro HTTP:', response.status, response.statusText);
