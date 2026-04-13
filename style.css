@@ -841,6 +841,15 @@ h5 {
     line-height: 1.5;
 }
 
+.contact-link {
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
 .footer-social-links {
     display: flex;
     gap: 12px;
